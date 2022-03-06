@@ -1,7 +1,7 @@
 import argparse
 import numpy as np
 import math
-import matplotlib.pyplot as pyplot
+import matplotlib.pyplot as plt
 import string
 
 iteration: int = 1000
@@ -300,18 +300,18 @@ def visualize(xInArray: np.array, b: np.array, xOfLSE: np.array, xOfNewton: np.a
         yPointsLSE = yPointsLSE + xOfLSE[i] * (xAxis ** (n - i - 1))
         yPointsNewton = yPointsNewton + xOfNewton[i] * (xAxis ** (n - i - 1))
 
-    pyplot.figure(1)
+    plt.figure(1)
     # Output LSE Figure
-    pyplot.subplot(2, 1, 1)
-    pyplot.scatter(xInArray, b, c="red")
-    pyplot.plot(xAxis, yPointsLSE, c="black")
+    plt.subplot(2, 1, 1)
+    plt.scatter(xInArray, b, c="red")
+    plt.plot(xAxis, yPointsLSE, c="black")
 
     # Output Newton Figure
-    pyplot.subplot(2, 1, 2)
-    pyplot.scatter(xInArray, b, c="red")
-    pyplot.plot(xAxis, yPointsNewton, c="black")
+    plt.subplot(2, 1, 2)
+    plt.scatter(xInArray, b, c="red")
+    plt.plot(xAxis, yPointsNewton, c="black")
 
-    pyplot.show()
+    plt.show()
 
 
 def main():
