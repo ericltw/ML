@@ -12,7 +12,6 @@ def univariateGaussian(mean, variance):
 
 
 # Welford's online algorithm.
-#
 # Reference: https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance
 def sequenceEstimator(mean, variance):
     count = 1
