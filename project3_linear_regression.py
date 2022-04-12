@@ -157,8 +157,8 @@ def baysianLinearRegression(a, b, n, w, recordOfX, recordOfY):
             meanOfFifty = postMean.copy()
 
         # Predictive Distribution
-        predictiveVariance = np.dot(X, postMean)
-        predictiveMean = (1 / aInverse) + X.dot(np.linalg.inv(postVariance).dot(X.T))
+        predictiveVariance = (1 / aInverse) + X.dot(np.linalg.inv(postVariance).dot(X.T))
+        predictiveMean = np.dot(X, postMean)
 
         outputOnlineLearning(n, x, y, postVariance, postMean, count, predictiveVariance, predictiveMean)
 
