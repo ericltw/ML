@@ -81,9 +81,9 @@ def main():
     x, y = loadData()
     numOfPoints = len(x)
 
-    if mode == 0:
+    if mode == 1:
         gaussianProcess(x, y)
-    elif mode == 1:
+    elif mode == 2:
         initGuess = np.array([1.0, 1.0])
         result = minimize(marginalLogLikelihood, initGuess)
 
