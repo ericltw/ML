@@ -170,7 +170,7 @@ def linearRBFCombination(trainingImages, trainingLabels, testingImages, testingL
 
     # Train the model based on the best parameters.
     kernelOfRBF = computeRBFKernel(trainingImages, trainingImages, bestGamma)
-    combination = computeCombinationKernel(kernelOfLinear, kernelOfRBF, bestGamma)
+    combination = computeCombinationKernel(kernelOfLinear, kernelOfRBF, numOfTrainingData)
     problem = svm_problem(trainingLabels, combination, isKernel=True)
     parameters = svm_parameter(bestParameters + ' -q')
     model = svm_train(problem, parameters)
@@ -179,7 +179,7 @@ def linearRBFCombination(trainingImages, trainingLabels, testingImages, testingL
     numOfTestingData, _ = testingImages.shape
     kernelOfLinear = computeLinearKernel(testingImages, testingImages)
     kernelOfRBF = computeRBFKernel(testingImages, testingImages, bestGamma)
-    combination = computeCombinationKernel(kernelOfLinear, kernelOfRBF, bestGamma)
+    combination = computeCombinationKernel(kernelOfLinear, kernelOfRBF, numOfTestingData)
     svm_predict(testingLabels, combination, model)
 
 
