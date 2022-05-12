@@ -127,6 +127,7 @@ def computeLinearKernel(x, y):
     return x.dot(y.T)
 
 
+# Reference: https://en.wikipedia.org/wiki/Radial_basis_function_kernel
 def computeRBFKernel(x, y, gamma):
     return np.exp(-gamma * cdist(x, y, 'sqeuclidean'))
 
