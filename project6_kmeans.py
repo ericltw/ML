@@ -204,7 +204,6 @@ def kernelKmeans(numOfRows, numOfCols, numOfClusters, clusters, kernel, initMode
         count += 1
 
     # Output the gif result.
-    print()
     filename = f'./output/kernel_kmeans/kernel_kmeans_{index}_' \
                f'cluster{numOfClusters}_' \
                f'{"kmeans++" if initMode else "random"}.gif'
