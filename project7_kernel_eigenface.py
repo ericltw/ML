@@ -1,12 +1,10 @@
 import argparse
-from argparse import ArgumentParser, ArgumentTypeError, Namespace
 import matplotlib.pyplot as plt
 import numpy as np
 import os
 from PIL import Image
 from scipy.spatial.distance import cdist
 import string
-import sys
 
 imageDirectory: string = 'data_project7/Yale_Face_Database'
 
