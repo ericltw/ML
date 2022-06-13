@@ -233,5 +233,5 @@ def main():
         spectralClustering(rows, cols, numOfClusters, matrixU, initMode, cutMode, index)
 
 
-if __name__ == '__main':
+if __name__ == '__main__':
     main()
